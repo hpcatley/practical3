@@ -3,7 +3,7 @@
 
 int Truckloads::numTrucks(int numCrates, int loadSize) {
     if(numCrates <= loadSize) {
-        return loadSize;
+        return 1;
     }
     else {
         numTrucks(numCrates/2, loadSize);
