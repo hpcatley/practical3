@@ -4,18 +4,23 @@
 
 #include <string>
 #include <iostream>
+#include "Reverser.h"
 
-int reverseDigit(int value) {
-    // base case
-    if (value<=1) {
-        return 1;
+int Reverser::reverseDigit(int value) {
+    
+    if (value<0) {
+        return -1;
+    }
+    else if (value <= 10) {
+        return value;
     }
     else {
-        reverseDigit(value/10);
+        std::cout << value%10;
+        return value/10;
     }
 }
 
-std::string reverseString(std::string characters) {
+std::string Reverser::reverseString(std::string characters) {
     int length = characters.length();
     if(length == 1) {
         std::cout << characters;
