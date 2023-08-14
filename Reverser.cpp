@@ -21,12 +21,14 @@ int Reverser::reverseDigit(int value) {
 }
 
 std::string Reverser::reverseString(std::string characters) {
-    int length = characters.length();
-    if(length == 1) {
-        std::cout << characters;
+    if(characters.size()==0) {
+        return "ERROR";
     }
-    else{
-        std::cout << characters[length - 1];
-        reverseString(characters.substr(0,length-1));
+    else if(characters.size()<=1) {
+        return characters;
+    }
+    else { 
+        return reverseString(characters.substr(1, characters.size()))+characters[0];
+
     }
 }
