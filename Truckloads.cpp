@@ -6,7 +6,7 @@ int Truckloads::numTrucks(int numCrates, int loadSize) {
         return 1;
     }
     else {
-        return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2, loadSize);
+        return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2, loadSize) + numTrucks(numCrates%2, loadSize);
     }
 }
 
