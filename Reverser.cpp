@@ -16,7 +16,7 @@ int Reverser::reverseDigit(int value) {
     }
     else {
         std::cout << value%10;
-        return value/10;
+        reverseDigit(value);
     }
 }
 
